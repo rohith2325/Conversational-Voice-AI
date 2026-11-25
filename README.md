@@ -1,20 +1,90 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🎙️ Conversational Voice AI
 
-# Run and deploy your AI Studio app
+An AI-powered voice assistant that lets users interact with artificial intelligence through natural voice conversations.
 
-This contains everything you need to run your app locally.
+✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1xc2RZtTcSvomHjBCDGd1IBANNIOAHviN
+- 🎤 Real-time voice interaction
+- 🤖 AI-powered conversational responses
+- 🔊 Audio input and output
+- 🎨 Interactive visual interface
+- ⚡ Fast and responsive experience
+- 💬 Natural conversational experience
 
-## Run Locally
+🛠️ Technologies Used
 
-**Prerequisites:**  Node.js
+- React
+- TypeScript
+- Vite
+- Google Gemini API
+- HTML
+- CSS
 
+📸 Project Preview
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Screenshots coming soon!
+
+🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+1. Clone the repository
+
+git clone https://github.com/rohith2325/Conversational-Voice-AI.git
+
+2. Open the project folder
+
+cd Conversational-Voice-AI
+
+3. Install dependencies
+
+npm install
+
+4. Configure your API key
+
+Create a ".env.local" file in the project root and add:
+
+VITE_GEMINI_API_KEY=your_gemini_api_key
+
+Replace "your_gemini_api_key" with your own Gemini API key.
+
+Security note: The current browser-based API key setup is suitable only for local experimentation. Vite exposes "VITE_" variables in browser code. For public deployment, use a secure backend or server-side token approach. Never publish your private API key.
+
+5. Start the development server
+
+npm run dev
+
+Open the local URL displayed in your terminal.
+
+📁 Project Structure
+
+Conversational-Voice-AI/
+│
+├── components/
+│   ├── SettingsControls.tsx
+│   └── Visualizer.tsx
+│
+├── hooks/
+│   └── useLiveAPI.ts
+│
+├── utils/
+│   └── audio.ts
+│
+├── App.tsx
+├── index.html
+├── index.tsx
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+
+🔐 Environment Variables
+
+The ".env.local" file contains your private development configuration.
+
+It should never be uploaded to GitHub.
+
+👨‍💻 Author
+
+Rohith
+
+GitHub: https://github.com/rohith2325
