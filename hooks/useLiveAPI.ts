@@ -112,9 +112,24 @@ export const useLiveAPI = (): UseLiveAPIResult => {
     setError(null);
 
     try {
+    const tokenResponse = await fetch('/.netlify/functions/gemini-token', {
+  method: 'POST',
+});
+
+if (!tokenResponse.ok) {
+  throw new Error('Unable to get a secure Gemini session token.');
+}
+
+const tokenData = await tokenResponse.json();
+
+if (!tokenData.token) {
+  throw new Error(tokenData.error || 'Gemini token was not returned.');
+}
+
 const ai = new GoogleGenAI({
-        apiKey: import.meta.env.VITE_GEMINI_API_KEY
-      });
+  apiKey: tokenData.token,
+  httpOptions: { apiVersion: 'v1alpha' },
+});
       
       // Initialize Audio Contexts
       // Input: 16kHz required by Gemini

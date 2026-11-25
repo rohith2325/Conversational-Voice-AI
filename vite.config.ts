@@ -6,7 +6,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: "/Conversational-Voice-AI/",
+      base: process.env.GITHUB_PAGES === "true"
+  ? "/Conversational-Voice-AI/"
+  : "/",
       server: {
         port: 3000,
         host: '0.0.0.0',
