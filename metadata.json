@@ -1,0 +1,7 @@
+{
+  "name": "convertional Voice AI",
+  "description": "A real-time, multilingual conversational AI powered for all queries and friendly conversation",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
