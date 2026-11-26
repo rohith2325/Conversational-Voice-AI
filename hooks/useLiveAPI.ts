@@ -112,7 +112,7 @@ export const useLiveAPI = (): UseLiveAPIResult => {
     setError(null);
 
     try {
-    const tokenResponse = await fetch('/.netlify/functions/gemini-token', {
+    const tokenResponse = await fetch('/api/gemini-token', {
   method: 'POST',
 });
 
